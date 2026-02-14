@@ -4,7 +4,7 @@ export default function AnimalList(){
     return(
         <div>
             <h1>Animals:</h1>
-            <ul>
+            <ul> 
                 {
                     animals.map((animal) => {
                         return <li key={animal}>{animal}</li>;
