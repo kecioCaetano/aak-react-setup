@@ -10,9 +10,10 @@ import ListPeople from './people.jsx'
 import AppButtonFunc from './propsFunctions.jsx'
 import Gallery from './gallery.jsx'
 import Clock from './clock.jsx'
+import Form from './sendHi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Clock />
+    <Form />
   </StrictMode>,
 )
