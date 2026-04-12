@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 // import './App.css'
@@ -21,11 +21,18 @@ function ListItem(props){
 
 function List(props){
   return(
-    <ul>
-      {props.animals.map((animal) => {
-        return <ListItem key={animal} animal={animal} />
-      })}
-    </ul>
+    <>
+      {!props.animals && <div>Loading...</div>}
+      {props.animals && props.animals.length > 0 && (
+        <ul>
+          {props.animals.map((animal) => {
+            return animal.startsWith('L') && <li key={animal}>{animal}</li>
+            // return <ListItem key={animal} animal={animal} />
+          })}
+        </ul>
+      )}
+      {props.animals && props.animals.length === 0 && <div>There are no animals in this list!</div>}
+    </>
   )
 }
 
